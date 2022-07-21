@@ -32,6 +32,8 @@
 //	Escribir "ingrese un numero"
 //	Leer num
 //	
+//	
+//	
 //	Escribir parimpar(num)
 //	
 //FinProceso
@@ -39,12 +41,14 @@
 //Funcion verificar =parimpar(num)
 //	Definir verificar Como Logico
 //	
-//	si num mod 2=0 Entonces
-//		verificar= Verdadero
-//	SiNo
-//		verificar= falso
-//		
-//	FinSi
+////	si num mod 2=0 Entonces
+///		verificar= verdadero
+///	SiNo
+///		verificar= falso
+///		
+///	//	FinSi
+//	
+//	verificar = (a mod2<>0)
 //FinFuncion
 
 
@@ -115,7 +119,7 @@
 //	FinPara
 //	cantidad= contador 
 //FinFuncion
-
+//
 
 ////5. Realizar una función que reciba un numero ingresado por el usuario y averigüe si el número es
 ////primo o no. Un número es primo cuando es divisible sólo por 1 y por sí mismo, por ejemplo: 2,
@@ -132,7 +136,7 @@
 //
 //Funcion verificar =primo(a)
 //	definir verificar Como Caracter
-//	Definir contador Como Real
+//	Definir contador Como entero
 //	
 //	
 //	
@@ -211,18 +215,139 @@
 //FinSubProceso
 
 
-
-
-
 ////8. Realizar un procedimiento que permita realizar la división entre dos números y muestre el
 ////cociente y el resto utilizando el método de restas sucesivas.
 ////El método de división por restas sucesivas consiste en restar el dividendo con el divisor hasta
 ////obtener un resultado menor que el divisor, este resultado es el residuo, y el número de restas
 ////realizadas es el cociente. Por ejemplo: 50 / 13:
-////		50 - 13 = 37 una resta realizada
-////		37 - 13 = 24 dos restas realizadas
-////		24 - 13 = 11 tres restas realizadas
-////	dado que 11 es menor que 13, entonces: el residuo es 11 y el cociente es 3.
+////50 - 13 = 37 una resta realizada
+////37 - 13 = 24 dos restas realizadas
+////24 - 13 = 11 tres restas realizadas
+////dado que 11 es menor que 13, entonces: el residuo es 11 y el cociente es 3.
+
+
+//Algoritmo ejercicio8
+//	
+//	definir num1, num2 Como Entero
+//	Escribir "ingrese 2 numeros"
+//	leer num1,num2
+//	division(num1,num2)
+//	
+//FinAlgoritmo
+//
+//
+//
+//Funcion division (a,b)
+//	
+//	definir aux, contador Como Entero
+//	
+//	aux=b
+//	contador=0
+//	
+//	hacer 
+//		a=a-b
+//		aux=a
+//		
+//		contador=contador+1
+//mientras Que a>=b  
+//	Escribir "el cociente es: " contador " el residuo es: " aux
+//FinFuncion
+
+
+
+////9. Escribir un programa que procese una secuencia de caracteres ingresada por teclado y
+////terminada en punto, y luego codifique la palabra o frase ingresada de la siguiente manera:
+////	cada vocal se reemplaza por el carácter que se indica en la tabla y el resto de los caracteres
+////	(incluyendo a las vocales acentuadas) se mantienen sin cambios.
+////	
+////	a e i o u
+////	@ # $ % *
+////	
+////	Realice un subprograma que reciba una secuencia de caracteres y retorne la codificación
+////	correspondiente. Utilice la estructura "según" para la transformación.
+////	Por ejemplo, si el usuario ingresa: Ayer, lunes, salimos a las once y 10.
+////		La salida del programa debería ser: @y#r, l*n#s, s@l$m%s @ l@s %nc# y 10.
+////		NOTA: investigue el uso de la función concatenar de PSeInt para armar la palabra/frase.
+////
+//
+//
+//Algoritmo ejercicio9
+//	
+//	definir letra,frase Como Caracter
+//	
+//	ingresarFrase(letra,frase)
+//	Escribir frase
+//	
+//	codificar(frase)
+//FinAlgoritmo
+//
+//
+//SubProceso ingresarFrase(a Por Referencia,b Por Referencia)
+//	
+//	b=""
+//	
+//	Hacer
+//		b=b+a
+//		Escribir "ingrese un caracter "
+//		leer a
+//		
+//	Mientras Que  a <>"."
+//	
+//FinSubProceso
+//
+//Funcion codificar(frase)
+//	definir sub,frasefinal Como Caracter
+//	
+//	frasefinal=""
+//	
+//	Para i=0 hasta Longitud(frase)-1 Con Paso 1 
+//		
+//		sub=Subcadena(frase,i,i)
+//		
+//		
+//		Segun sub Hacer
+//			"a":
+//				sub="@"
+//				
+//			"e":
+//				sub="#"
+//			"i":
+//				sub="$"
+//			"o":
+//				sub="%"
+//			"u":
+//				sub="*"
+//				
+//				
+//		Fin Segun
+//		Escribir Sin Saltar sub,""
+//		
+//	FinPara
+//	
+//FinFuncion
+
+
+
+////10. Escribir una función recursiva que devuelva la suma de los primeros N enteros.
+
+
+
+
+
+
+//Proceso asda
+//	definir frase,sub Como Caracter
+//	Definir long Como Entero
+//	Escribir "ingrese una frase"
+//	Leer frase
+//	
+//	long= Longitud(frase)
+//	
+//	sub= Subcadena(frase,long-1,long-1)
+//	
+//	Escribir sub
+//
+//FinProceso
 
 
 
@@ -235,4 +360,31 @@
 
 
 
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
